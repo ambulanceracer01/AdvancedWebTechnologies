@@ -1,5 +1,6 @@
 import * as $ from 'jquery'; //Non ES6 Moduel import
-import * as moment from 'moment'; //Non ES6 Moduel import
+//import * as moment from 'moment'; //Non ES6 Moduel import
+import addDays from 'date-fns/addDays';
 import { List } from 'linqts';
 import { Voucher } from './model';
 
@@ -194,9 +195,11 @@ export class TypesDemos {
 
   useTypings() {
     //using moment
-    let dt = new Date(1990, 3, 2);
-    console.log('Using time format: ', moment(dt).format('LTS'));
-
+    let dt = new Date(2019, 11, 19);
+    //console.log('Using time format: ', moment(dt).format('LTS'));
+    // using date-fns
+    const newdate = addDays(dt, 10);
+    console.log(newdate);
     //using jQuery
     let myArray = ['Angular', 'React', 'SPFx'];
     console.log('myArray is an Array: ', $.isArray(myArray));
@@ -339,11 +342,17 @@ export class TypesDemos {
     const orders = [
       {
         orderId: 1,
-        items: [{ name: 'abc', price: 2.22 }, { name: 'ded', price: 4.22 }]
+        items: [
+          { name: 'abc', price: 2.22 },
+          { name: 'ded', price: 4.22 }
+        ]
       },
       {
         orderId: 2,
-        items: [{ name: 'asdfbc', price: 6.22 }, { name: 'sdf', price: 8.22 }]
+        items: [
+          { name: 'asdfbc', price: 6.22 },
+          { name: 'sdf', price: 8.22 }
+        ]
       }
     ];
 
@@ -548,6 +557,9 @@ export class TypesDemos {
 
     log('totalArrow', totalArrow);
 
-    log('totalArrow 2', Array.from(setNbrs).reduce((a, b) => a + b));
+    log(
+      'totalArrow 2',
+      Array.from(setNbrs).reduce((a, b) => a + b)
+    );
   }
 }

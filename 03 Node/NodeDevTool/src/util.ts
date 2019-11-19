@@ -1,7 +1,7 @@
-import * as $ from "jquery";
+// import * as $ from "jquery";
 
 export class Util {
   log() {
-    console.log("hello word logged from Util");
-  }  
+    console.log('hello word logged from Util');
+  }
 }

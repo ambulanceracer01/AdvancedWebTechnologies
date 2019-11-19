@@ -4,7 +4,7 @@
   "description": "Introduction to Node based Dev",
   "main": "index.js",
   "scripts": {
-    "compile-sass": "gulp compile:sass",
+    "compile-sass": "gulp compile-sass",
     "build": "./node_modules/.bin/webpack-cli",
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,14 +13,16 @@
   "license": "ISC",
   "dependencies": {
     "es6-promise": "^4.2.4",
-    "jquery": "^3.4.1"
+    "gulp-cli": "^2.2.0",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.4.3",
     "@types/jquery": "^3.3.2",
     "@webpack-cli/init": "^0.2.2",
-    "@webpack-cli/migrate": "^0.1.8",
+    "@webpack-cli/migrate": "^0.1.9",
     "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -31,7 +33,7 @@
     "css-loader": "^1.0.0",
     "extract-loader": "^3.0.0",
     "file-loader": "^2.0.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "latest",
     "gulp-sass": "^4.0.1",

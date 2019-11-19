@@ -24,7 +24,7 @@ gulp.task('compile-sass', function() {
 // Watch sass
 
 gulp.task('watch-sass', function() {
-  gulp.watch(paths.scss, ['compile:sass']);
+  gulp.watch(paths.scss, ['compile-sass']);
 });
 
 gulp.task('babel', () => {
